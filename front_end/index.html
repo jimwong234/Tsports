@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="en">    
+    <head>
+        <meta charset = "UTF-8">
+        <title> UofT Sports </title>
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+            
+        <!-- Google Rokkitt Font-->
+        <link href="http://fonts.googleapis.com/css?family=Rokkitt" rel='stylesheet' type='text/css'>
+            
+        <script type="text/javascript" src="assets/scripts/jquery-2.2.4.min.js" defer></script> <!--New JQuery-->
+        <script type="text/javascript" src="assets/scripts/FrontEnd.js" defer></script>
+        
+        <!--JQuery UI-->
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  <!--Old JQuery needed for the JQuery UI-->
+        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+   
+        
+    </head>
+
+
+    <body>
+       <header id="header"> 
+
+          <div id="SiteLogo">
+          <a href="./index.html"> <img src="./assets/images/TSportsLogo_red.svg" alt="TSportsLogo" /> </a>
+          </div>
+ 
+         <nav id="Site_Nav">
+             
+             <div id="Main_Nav" class="main_navs">
+                 <ul>
+                     <li> <a href="#AboutUs"> About Us </a>  </li>
+                     <li> <a href="#UpcomingEvents"> Upcoming Events </a> </li>
+                     <li> <a href="#FAQ"> FAQ </a> </li>
+                 </ul>
+             </div>
+             <!--Jim's responsive design start here-->
+             <div id="nav_icon"><a href="javascript:void(0);" onclick="showNavBtn()">☰</a></div>
+             <!--Jim's responsive design end here-->
+             <div id="Home_Buttons" class="home_btns">
+                 <ul>
+                     <li id="Register_Button"> <a href="./registration.html"> Register </a> </li>  <!--Change this to the correct link-->
+                     <li id="Login_Button"> <a href="./login.html"> Login </a> </li>  <!--Change this to the correct link-->
+                 </ul>
+             </div>
+             
+         </nav>
+
+       </header>
+            <!--The website banner-->
+       
+           <!--JS script sets a random picture everytime the page is loaded-->
+           <div class="Banner-Wrapper" id="Banner-1">
+               <div class="BannerContent-Wrapper">
+                   <div class="Banner-Text">
+                       <h2 class="Banner-Text-Header">  Teamwork Makes The Dream Work  </h2>
+                       <p class="Banner-Text-Content"> Looking to socialize and play sports? TSports will take care of it! </p>
+                       <a href="./registration.html" class="SignUpLink"> Sign up! </a>  <!--Change this to the correct link, to the register page-->
+                   </div>
+               </div>
+           </div>
+          
+      <section id="AboutUs">
+          
+          <div id="AboutUs_Content">
+              
+              <h2 id="AboutUs_Header"> About TSports </h2>
+              
+              <p id="AboutUs_Text"> <strong> TSports </strong> is University of Toronto's largest sports social network to meet others. TSports makes it easy for anyone to organize a team or find thousands of other individuals willing to show up and play sports. UofT is home to more than 30,000 students, majority of which have the goal of socializing and playing sports. </p>
+              
+              <p id="AboutUs_MissionStatement"> <strong> TSport's Mission Statement  </strong> is to connect University of Toronto's community and enhance a student's experience while university.
+              </p>
+              
+              
+              
+          </div>
+          <div id="AboutUs_img"><img src="./assets/images/about_us.jpg"></div>
+      </section>
+    
+      <section id="UpcomingEvents">
+         
+          <div id="UpcomingEvents_Content">
+              <h3 id="UpcomingEvents_Title"> Upcoming Events </h3>
+              <ul>
+                  <!--The Date of the Upcoming Events -->
+                  <li id="EventDate"> FRIDAY, JULY 10 </li>   <!--This will change via JQuery, when clicking the calendar-->
+              
+                  <!--The Actual Events-->
+                  <li>
+                      <ul class="EventsContainer">
+                          
+                          <li>
+                              <div class="Event_Time">
+                                  <p> 10:00AM </p>
+                              </div>
+                          
+                              <div class="EventInfo">
+                                  <h3 class="SportName"> Indoor Soccer  </h3>
+                                  
+                                  <p class="EventLocation">  Location: AC Field 2 </p>
+                                  
+                                  <p class="EventAttendees">
+                                  
+                                        8 People Attending
+                                   
+                                        <!--Countdown of num people needed-->
+                                        <span class="EventSpotsLeft">  2 Spots left! </span>
+                                  
+                                  </p>
+                              </div>
+                              
+                              
+                              <div class="EventMoreInfo"> <img src="./assets/images/plus.svg" alt="plusSign" width="30px" /> </div>
+                          </li>
+                          
+                          
+                          <li>
+                              <div class="Event_Time">
+                                  <p> 14:00PM </p>
+                              </div>
+                              
+                              <div class="EventInfo">
+                                  <h3 class="SportName"> Water-Polo  </h3>
+                                  
+                                  <p class="EventLocation">  Location: AC Benson Pool </p>
+                                  
+                                  <p class="EventAttendees">
+                                  
+                                  12 People Attending
+                                  
+                                  <!--Countdown of num people needed-->
+                                  <span class="EventSpotsLeft">  8 Spots left! </span>
+                                  
+                                  </p>
+                              </div>
+                              
+                              
+                              <div class="EventMoreInfo"> <img src="./assets/images/plus.svg" alt="plusSign" width="30px" /> </div>
+                          </li>
+                          
+                          
+                          <li>
+                              <div class="Event_Time">
+                                  <p> 10:05AM </p>
+                              </div>
+                              
+                              <div class="EventInfo">
+                                  <h3 class="SportName"> Outdoor Soccer  </h3>
+                                  
+                                  <p class="EventLocation">  Location: AC Soccer Field </p>
+                                  
+                                  <p class="EventAttendees">
+                                  
+                                  5 People Attending
+                                  
+                                  <!--Countdown of num people needed-->
+                                  <span class="EventSpotsLeft">  5 Spots left! </span>
+                                  
+                                  </p>
+                              </div>
+                              
+                              
+                              <div class="EventMoreInfo"> <img src="./assets/images/plus.svg" alt="plusSign" width="30px" /> </div>
+                          </li>
+                          
+                          
+                          <li>
+                              <div class="Event_Time">
+                                  <p> 10:00AM </p>
+                              </div>
+                              
+                              <div class="EventInfo">
+                                  <h3 class="SportName"> Tennis  </h3>
+                                  
+                                  <p class="EventLocation">  Location: Harthouse Tennis Court </p>
+                                  
+                                  <p class="EventAttendees">
+                                  
+                                  1 People Attending
+                                  
+                                  <!--Countdown of num people needed-->
+                                  <span class="EventSpotsLeft">  1 Spot left! </span>
+                                  
+                                  </p>
+                              </div>
+                              
+                              
+                              <div class="EventMoreInfo"> <img src="./assets/images/plus.svg" alt="plusSign" width="30px" /> </div>
+                          </li>
+                          
+                          
+                          <li>
+                              <div class="Event_Time">
+                                  <p> 10:00AM </p>
+                              </div>
+                              
+                              <div class="EventInfo">
+                                  <h3 class="SportName"> Squash  </h3>
+                                  
+                                  <p class="EventLocation">  Location: Harthouse Squart Courts </p>
+                                  
+                                  <p class="EventAttendees">
+                                  
+                                  2 People Attending
+                                  
+                                  <!--Countdown of num people needed-->
+                                  <span class="EventSpotsLeft">  2 Spots left! </span>
+                                  
+                                  </p>
+                              </div>
+                              
+                              
+                              <div class="EventMoreInfo"> <img src="./assets/images/plus.svg" alt="plusSign" width="30px" /> </div>
+                          </li>
+                          
+                          
+                          
+                      </ul>
+                      
+                  </li>
+              
+              </ul>
+              
+              <!--Display a show more button, activated via JQuery-->
+              <p id="ShowMoreButton">  Show more </p>
+          
+          </div>
+          
+        <!--datepicker is activated by clicking on the calendar icon-->
+          <input type="hidden" id="datepicker" />
+          
+      </section>
+    
+    
+     <section id="FAQ">
+         <div id="FAQ_Content">
+             
+             <h3> FAQ  </h3>
+             
+             
+                 <ul id="FAQ_QAs">
+                   
+                   <li>
+                       <p class="FAQ_Q"> Q: How should we be sure that the person will show up to the sport event? </p>
+                       <p class="FAQ_A"> A: After the event, users are rated by other users, who confirmed that they will be attending that event, and comments can be left under the user's profile. Users can deem other users to be credible by looking at their rating and the comments.  </p>
+                   </li>
+                   
+                   <li>
+                       <p class="FAQ_Q"> Q: Is this only for University of Toronto St. George Campus? </p>
+                       <p class="FAQ_A"> A: TSports is for UTSG, UTM, and UTSC. We are hoping to expand to other Canadian universities.  </p>
+                   </li>
+                   
+                   
+                   <li>
+                       <p class="FAQ_Q"> Q: What if we want to limit our sporting event to professional students only? </p>
+                       <p class="FAQ_A"> A: The user who created the sporting event has two options. They can either include that in the event description and set the requirements for that event to only allow top-rated students in a sport to join. They can also remove users from attending an event after analyzing their profile and deciding whether he/she is good at the sport or not.  </p>
+                   </li>
+                   
+                   
+                 </ul>
+            
+         </div>
+     </section>
+    
+    
+      <footer>
+          
+        <div id="Footer_Content">
+            <ul id="AboutUs_SocialNetwork">
+                  <li> <a href="http://www.facebook.com"> <img id="fb_img" src="./assets/images/facebook1.png" /> </a> </li>
+                  <li> <a href="http://www.twitter.com"> <img id="twitter_img" src="./assets/images/twitter.png" /> </a> </li>
+                  <li> <a href="http://www.instagram.com"> <img id="ins_img"src="./assets/images/instagram.png" /> </a> </li>
+            </ul>
+            <ul>
+                <li> Help </li>
+                <li> Feedback </li>
+                <li> <a href="./copyright.html"> Copyright</a> </li>
+                <li> Careers </li>
+                <li> Contact Us </li>
+            </ul>
+        </div>
+        
+        <div id="Copyright">
+            <p id="Copyright_Logo"> ©2016 TSports. All Rights Reserved. </p>
+        </div>
+        
+     </footer>
+
+
+    </body>
+
+</html>
+
+

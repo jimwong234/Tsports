@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/registrationStyle.css">
+    <!-- Google Rokkitt Font-->
+    <link href="http://fonts.googleapis.com/css?family=Rokkitt" rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="assets/scripts/jquery-2.2.4.min.js" defer></script>
+    <script type="text/javascript" src="assets/scripts/registration.js" defer></script>
+
+</head>
+<body>
+    <header id="header"> 
+          <div id="SiteLogo">
+          <a href="./index.html"> <img src="./assets/images/TSportsLogo_red.svg" alt="TSportsLogo" /> </a>
+          </div>
+ 
+          <nav id="Site_Nav">  
+              <div id="Main_Nav">
+                 <ul>
+                     <li> <a href="./index.html"> Home </a>  </li>
+                 </ul>
+              </div>
+
+              <div id="Home_Buttons">
+                  <ul>
+                      <li id="Register_Button"> <a href="./registration.html"> Register </a> </li>  <!--Change this to the correct link-->
+                      <li id="Login_Button"> <a href="./login.html"> Login </a> </li>  <!--Change this to the correct link-->
+                  </ul>
+              </div>      
+          </nav>
+    </header>
+
+    <main>
+        <!--Cancels form if invalid-->
+      <form action="/UserRegistration" method="POST" id="UserRegistration">
+
+        <section id="firstname">
+          <p>First Name</p>
+          <input type="text" name="firstname" placeholder="First Name" pattern="[a-zA-Z]+" title="Letters Only" required></input>
+        </section>
+        
+        <section id="lastname">
+          <p>Last Name</p>
+          <input type="text" name="lastname" placeholder="Last Name" pattern="[a-zA-Z]+" title="Letters Only" required></input>
+        </section>
+
+        <section id="birthday">
+          <p>Birthday</p>
+          <input type="date" name="birthday" placeholder="yyyy-mm-dd" 
+          pattern="^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])" required></input>
+        </section>
+
+        <section id="gender">
+          <p>Gender</p>
+          <div class="dropdown">
+            <select required name="gender" class="dropdown-select">
+              <option value="">Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+        </section>
+
+        <section id="campus">
+          <p>Campus</p>
+          <div class="dropdown">
+            <select required name="campus" class="dropdown-select">
+              <option value="">Campus</option>
+              <option value="stgeorge">St.George</option>
+              <option value="missisauga">Missisauga</option>
+              <option value="scarborough">Scarborough</option>
+            </select>
+          </div>
+        </section>
+
+        <section id="height">
+          <p>Height</p>
+          <input type="number" name="height" placeholder="cm" min="0" max="250" step="1"
+          pattern="\d{1,3}" required title="Ex: 180"></input>
+        </section>
+
+        <section id="weight">
+          <p>Weight</p>
+          <input type="number" name="weight" placeholder="kg" min="0" max="250" step="1"
+          pattern="\d{1,3}" required></input>
+        </section>
+
+        <section id="email">
+          <p>Email</p>
+          <input type="email" name="email" placeholder="Email" 
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required></input>
+        </section>
+        
+        <section id="phone">
+          <p>Phone</p>
+          <input type="text" name="phone" placeholder="Phone"
+          pattern="\d{10}|(\(\d{3}\))?(\d{3})?-?\d{3}-\d{4}|\(\d{3}\)\d{7}" required></input>
+        </section>
+
+        <section id="password">
+          <p>Password</p>
+          <input type="password" name="password" placeholder="Password"
+          pattern=".{6,}" title="Minimum 6 characters required" required>
+          </input>
+        </section>
+
+        <section id="cfpassword">
+          <p>Confirm Password</p>
+          <input type="password" name="cfpassword" placeholder="Confirm Password"
+          pattern=".{6,}" title="Minimum 6 characters required" required>
+          </input>
+        </section>
+
+        <section id="aboutme">
+          <p>About Me</p>
+          <textarea id="aboutme_text" cols="39" row="50" name="about"></textarea>
+        </section>
+
+        <section id="sports">
+          <p>Sports</p>
+          <div id="ck-collection">
+
+          <div class="ck-button">
+            <input type="checkbox" id="cycling" name="cycling" value="1">
+            <label for="cycling">
+            <img src="assets/images/cycling.svg" width="20" height="20"/>
+            Cycling
+            </label>
+          </div>
+
+          
+
+          <div class="ck-button">
+            <input type="checkbox" id="waterpolo" name="waterpolo" value="2">
+            <label for="waterpolo">
+            <img src="assets/images/waterpolo.svg" width="20" height="20"/>
+            Waterpolo
+            </label>
+          </div>
+
+          <div class="ck-button">
+            <input type="checkbox" id="squash" name="squash" value="3">
+            <label for="squash">
+            <img src="assets/images/squash.svg" width="20" height="20"/>
+            Squash
+            </label>
+          </div>
+
+          <div class="ck-button">
+            <input type="checkbox" id="boxing" name="boxing" value="4">
+            <label for="boxing">
+            <img src="assets/images/boxing.svg" width="20" height="20"/>
+            Boxing
+            </label>
+          </div>
+
+          <div class="ck-button">
+            <input type="checkbox" id="taekwondo" name="taekwondo" value="5">
+            <label for="taekwondo">
+            <img src="assets/images/taekwondo.svg" width="20" height="20"/>
+            Taekwondo
+            </label>
+          </div>
+
+          <div class="ck-button">
+            <input type="checkbox" id="basketball" name="basketball" value="6">
+            <label for="basketball">
+            <img src="assets/images/basketball.svg" width="20" height="20"/>
+            Basketball
+            </label>
+          </div>
+
+          <div class="ck-button">
+            <input type="checkbox" id="tabletennis" name="tabletennis" value="7">
+            <label for="tabletennis">
+            <img src="assets/images/tabletennis.svg" width="20" height="20"/>
+            Tabletennis
+            </label>
+          </div>
+
+          <div class="ck-button">
+            <input type="checkbox" id="tennis" name="tennis" value="8">
+            <label for="tennis">
+            <img src="assets/images/tennis.svg" width="20" height="20"/>
+            Tennis
+            </label>
+          </div>
+
+          <div class="ck-button">
+            <input type="checkbox" id="volleyball" name="volleyball" value="9">
+            <label for="volleyball">
+            <img src="assets/images/volleyball.svg" width="20" height="20"/>
+            Volleyball
+            </label>
+          </div>
+
+          <div class="ck-button">
+            <input type="checkbox" id="football" name="football" value="10">
+            <label for="football">
+            <img src="assets/images/football.svg" width="20" height="20"/>
+            Football
+            </label>
+          </div>
+          
+          <div class="ck-button">
+            <input type="checkbox" id="swimming" name="swimming" value="11">
+            <label for="swimming">
+            <img src="assets/images/swimming.svg" width="20" height="20"/>
+            Swimming
+            </label>
+          </div>
+
+          </div>
+        </section>
+
+        <input type="submit" id="input_submit" value="Submit"/>
+
+      </form>
+      <div id="error_mes"></div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/login.css">
+	<!-- Google Rokkitt Font-->
+	<link href="https://fonts.googleapis.com/css?family=Rokkitt" rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="assets/scripts/jquery-2.2.4.min.js" defer></script>
+        <script type="text/javascript" src="assets/scripts/login.js" defer></script>
+</head>
+<body>
+	<header id="header"> 
+          <div id="SiteLogo">
+          <a href="./index.html"> <img src="./assets/images/TSportsLogo_red.svg" alt="TSportsLogo" /> </a>
+          </div>
+ 
+          <nav id="Site_Nav">  
+              <div id="Main_Nav">
+                 <ul>
+                     <li> <a href="./index.html"> Home </a>  </li>
+                 </ul>
+              </div>
+
+              <div id="Home_Buttons">
+                  <ul>
+                      <li id="Register_Button"> <a href="./registration.html"> Register </a> </li>  <!--Change this to the correct link-->
+                      <li id="Login_Button"> <a href="./login.html"> Login </a> </li>  <!--Change this to the correct link-->
+                  </ul>
+              </div>      
+          </nav>
+    </header>
+
+	<main>
+		<section class="login_form">
+			<h1>Sign in</h1>
+			<form action="/WebSiteUserLogin" method="POST" autocomplete="off" id="UserLoginForm">
+		            <input type="email" class="input_email" name="email" placeholder="Email address" required />
+		            <!--<span class="form_hint">Enter a valid email</span> -->
+		            <input type="password" pattern=".{6,}" required title="Minimum 6 characters required"class="input_password" name="password" placeholder="Password" required/>
+		            <input type="submit" class="input_submit" value="Login"/>
+		            <span id="divison_img"><img src="assets/images/border.png"></span>
+		    </form>
+		    <span id="forgot_pw"><a href="">Forgot password?</a></span>
+		</section>
+
+		<section class="other_accounts">
+			<h1>Sign in using other methods</h1>
+<!--			<button class="facebook">-->
+<button class="facebook" onclick="location.href='/auth/facebook'">
+            <img src="assets/images/facebook.png" width="17" height="17">
+			<span>Login with Facebook</span></button>
+		</section>
+		
+	</main>
+    <div id="error_mes"></div>
+</body>
+</html>

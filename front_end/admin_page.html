@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset = "UTF-8">
+            <title>Admin View</title>      
+            <link rel="stylesheet" type="text/css" href="./assets/css/admin_page.css">
+            <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel='stylesheet' type='text/css'>
+            <!--JQuery cookie plugin-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" defer></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script type="text/javascript" src="assets/scripts/admin_page.js" defer></script>
+    </head>
+
+    <body>                
+        <!--The top header-->
+        <header id="header">               
+            <div id="SiteLogo">
+                <!--Make this a link to your own home page-->
+                <a href="./admin_page.html">
+                <img src="./assets/images/TSportsLogo_red.svg" alt="TSportsLogo" />
+                </a>
+            </div>
+               
+            <nav id="Site_Nav">
+                <ul id="Main_Nav">
+                    <li id="AdminName"></li>
+                    <li id="HomeButton"><a href="./admin_page.html"> Home </a> </li>
+                    <li id="SignOut_Button"> Sign Out </li>                    
+                </ul> 
+            </nav>
+        </header>
+           
+        <section id="AdminDashboard">    
+            <img id="AdminPic" src="assets/images/admin.png" alt="AdminPic" />
+            <h2 class="AdminName">Admin</h2>                   
+            <nav id="Controllers">
+                <ul>
+                    <li id="AllUsers"> Users  </li>
+                    <li id="AllEvents"> Events </li>
+                    <li id="CurrentStatus"> Statistics </li>
+                </ul>
+            </nav>
+        </section> 
+
+        <section id="ResultShowBoard">
+            
+        </section>
+    </body>
+</html>
+
+

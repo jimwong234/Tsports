@@ -1,0 +1,517 @@
+/*Clear the default margin and padding for all elements*/
+*
+{
+    margin:0px;
+    padding:0px;
+    font-family: "Lato","Helvetica Neue", Arial ,Helvetica, sans-serif;
+}
+
+li
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+/* header: top menu */
+#header
+{
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 55px;
+    z-index: 1000;  /*To prevent images from overlapping the fixed header*/
+    position: fixed;
+}
+
+
+#SiteLogo img
+{
+    margin-left: 4px;
+    margin-top: 6px;
+    height: 42px;
+    width: 150px;
+    float: left;
+}
+
+#Site_Nav
+{
+    padding-top: 10px;
+}
+
+#Site_Nav a
+{
+    color: #74AD1B;
+}
+
+#Main_Nav li
+{
+    display: inline-block;
+    margin: 7px 7px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+
+#HomeButton a
+{
+    padding-top:23px;
+    padding-bottom:14px;
+    padding-left: 9px;
+    padding-right: 9px;
+    color: #74AD1B;
+    font-size: 14px;
+}
+
+/*Make the links bold on hover*/
+#Main_Nav #HomeButton a:hover
+{
+    color: #A0F6F6;
+    transition: all ease-in-out 0.3s;
+    background-color: #111111;
+}
+
+/*Add a border to the SignOut_Button button*/
+#SignOut_Button
+{
+    transition: all ease-in-out 0.3s;
+    border: 2px solid #74AD1B;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #74AD1B;
+}
+
+
+/*Make the links bold on hover*/
+#SignOut_Button:hover
+{
+    color: #A0F6F6;
+}
+
+
+#SearchBar
+{
+    float: left;
+    margin-left: 58px;
+}
+
+#SearchBar input
+{
+    line-height: 2.3em;
+    padding-left: 10px;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+#RightNav
+{
+    float: right;
+    padding-right: 10px;
+}
+
+#FB_Friend_SVG
+{
+    position: relative;
+}
+
+/*If its zero (ie. no requests), we will hide the p tag*/
+#FB_Friend_SVG p
+{
+    position: absolute;
+    padding: 2px 2px;
+    border-radius: 3px;
+    background-color: red;
+    font-size: 10px;
+    color: white;
+    left: 15px;
+    top: -11%;
+    opacity: 0.9;
+}
+
+
+#FB_Message_SVG
+{
+    position: relative;
+}
+
+/*If its zero (ie. no requests), we will hide the p tag*/
+#FB_Message_SVG p
+{
+    position: absolute;
+    padding: 2px 2px;
+    border-radius: 3px;
+    background-color: red;
+    font-size: 10px;
+    color: white;
+    left: 15px;
+    top: -11%;
+    opacity: 0.9;
+}
+
+
+#FB_Notification_SVG
+{
+    position: relative;
+}
+
+
+/*If its zero (ie. no notifications), we will hide the p tag*/
+#FB_Notification_SVG p
+{
+    position: absolute;
+    padding: 2px 2px;
+    border-radius: 3px;
+    background-color: red;
+    font-size: 10px;
+    color: white;
+    left: 15px;
+    top: -11%;
+    opacity: 0.9;
+}
+
+
+/* Search User*/
+#SearchUserPreviewBox
+{
+    background-color: rgb(237,238, 241);
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 3px;
+    margin-top: 0.5px;
+    max-height:200px; /*Displays max 5 user searches at a time, rest have to scroll*/
+    overflow: scroll;
+}
+
+/*Scroll in Y but hide the scrollbar*/
+/*Chrome Only*/
+::-webkit-scrollbar
+{
+    display: none;
+}
+
+#SearchUserPreviewBox #SearchUsersUL
+{
+    background-color: rgb(255, 255, 255);
+}
+
+
+/*Display the names inline-block*/
+#SearchUserPreviewBox #SearchUsersUL .SearchedUser
+{
+    cursor: pointer;
+    padding: 5px 5px;
+    
+    font-weight: 600;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 1);
+    letter-spacing: 0.01em;
+}
+
+#SearchUserPreviewBox #SearchUsersUL .SearchedUser *
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*When hovering over a user*/
+#SearchUserPreviewBox #SearchUsersUL .SearchedUser:hover
+{
+    background-color: rgba(64, 128, 255, 0.3);
+}
+
+#SearchUserPreviewBox #SearchUsersUL .SearchedUser img
+{
+    border-radius: 50%;
+    padding-right: 6px;
+}
+
+
+
+/*List of people message Preview box*/
+#ListpplMessagedPreviewBox
+{
+    background-color: rgb(237,238, 241);
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 3px;
+    position: absolute;
+    margin-top: 0.5px;
+    max-height:200px; /*Displays max 5 messages at a time, rest have to scroll*/
+    overflow: scroll;
+    width: 200px;
+/*    left: 85%;*/
+}
+
+
+#ListpplMessagedPreviewBox #PplMessagedUL
+{
+    background-color: rgb(255, 255, 255);
+}
+
+
+#ListpplMessagedPreviewBox #PplMessagedUL .PersonMessaged
+{
+    cursor: pointer;
+    padding: 7px 7px;
+}
+
+/*When hovering over a user*/
+#ListpplMessagedPreviewBox #PplMessagedUL .PersonMessaged:hover
+{
+    background-color: rgb(246, 247, 249);
+}
+
+/*Display the names inline-block*/
+/* > * means only children one level down */
+#ListpplMessagedPreviewBox #PplMessagedUL .PersonMessaged > *
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#ListpplMessagedPreviewBox #PplMessagedUL .PersonMessaged .PersonMessagedimg
+{
+    border-radius: 50%;
+    padding-right: 10px;
+}
+
+#ListpplMessagedPreviewBox #PplMessagedUL .PersonMessaged .PersonMessagedInfo
+{
+    text-align: left;
+}
+
+/*The name of the person we are messaging*/
+#ListpplMessagedPreviewBox #PplMessagedUL .PersonMessaged .PersonMessagedInfo .PersonMessagedName
+{
+    font-weight: 500;
+    font-size: 13px;
+    color: rgb(29, 33, 41);
+    letter-spacing: 0.01em;
+}
+
+/*Our last message exhanged with that user*/
+#ListpplMessagedPreviewBox #PplMessagedUL .PersonMessaged .PersonMessagedInfo .PersonMessagedMessage
+{
+
+    font-size: 11px;
+    color: rgb(127, 127, 127);
+    letter-spacing: 0.01em;
+    padding-right: 10px;
+}
+
+
+
+
+
+
+/*Friend Request Preview box*/
+#FriendReqsPreviewBox
+{
+    background-color: rgb(237,238, 241);
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 3px;
+    position: absolute;
+    max-height:100px; /*Displays max 5 requests at a time, rest have to scroll*/
+    overflow: scroll;
+}
+
+
+#FriendReqsPreviewBox #FriendReqUL
+{
+    background-color: rgb(255, 255, 255);
+}
+
+
+#FriendReqsPreviewBox #FriendReqUL .friendreq .FriendReqName
+{
+    cursor: pointer;
+    margin: 0px 3px 0px 3px;
+}
+
+#FriendReqsPreviewBox #FriendReqUL .friendreq
+{
+    padding: 4px 4px;
+    font-weight: 500;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 1);
+    letter-spacing: 0.01em;
+}
+
+/*Display the names inline-block*/
+#FriendReqsPreviewBox #FriendReqUL .friendreq *
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#FriendReqsPreviewBox #FriendReqUL .friendreq .FriendReqImage
+{
+    border-radius: 50%;
+    padding-right: 6px;
+}
+
+#FriendReqsPreviewBox #FriendReqUL .friendreq .Accept_Reject_icons
+{
+    float: right;
+}
+
+#FriendReqsPreviewBox #FriendReqUL .friendreq .AcceptFriendReq
+{
+    margin: 0px 3px 0px 3px;
+    cursor: pointer;
+}
+
+#FriendReqsPreviewBox #FriendReqUL .friendreq .RejectFriendReq
+{
+    margin: 0px 3px 0px 3px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/*The Chatbox CSS styles*/
+#ChatBox
+{
+    height: 300px;
+    position: fixed;
+    width: 220px;
+    margin-left: 15px;
+    z-index: 800;  /*Chatbox has priority*/
+    border-radius: 3px;
+    left: 80%;
+}
+
+#ChatBoxHeader
+{
+    position: fixed;
+    width: 216px;
+    background-color: rgba(0,0,0,0.8);
+    padding: 1px 2px;
+    z-index: 100;
+    padding-bottom: 3px;
+    border-radius: 3px;
+}
+
+#ChatBoxHeader *
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*Make the ChatBox username and "X" SVG in-line*/
+#ChatBoxHeader p
+{
+    text-align: left;
+    font-size: 13px;
+    cursor: pointer;
+    color: white;
+    padding-left: 2px;
+}
+
+#ChatBoxHeader #ChatBoxClose
+{
+    float: right;
+    padding-top: 5px;
+    padding-right: 7px;
+    cursor: pointer;
+}
+
+
+#ChatContent
+{
+    padding: 5px 5px;
+    background-color: rgb(237, 238, 241);
+    height: 290px;
+    overflow: scroll;
+}
+
+/*Alternate the Chat Data like Facebook*/
+#ChatContent .MessageNotByMe
+{
+    float: right;
+    text-align: left;  /*Message is left-aligned*/
+    border: 1px solid rgb(213, 213, 213);
+    background-color: rgb(254, 254, 254);
+    border-radius: 3px;
+    width: 70%;
+    word-wrap:break-word;
+}
+
+#ChatContent .MessageByMe
+{
+    float: left;
+    text-align: left; /*Message is left-aligned*/
+    border: 1px solid rgb(188, 199, 214);
+    background-color: rgb(224, 237, 255);
+    border-radius: 9px;
+    border-bottom-left-radius: 0px;
+    width: 70%;
+    word-wrap:break-word;
+}
+
+/*Give the last message a margin-below so it doesn't overlap with the form*/
+#ChatContent .ChatContentDatas:last-child
+{
+    margin-bottom: 30px;
+}
+
+
+#ChatContent .ChatContentDatas
+{
+    font-size: 13px;
+    padding: 3px 3px;
+    margin: 3px 3px;
+}
+
+
+#ChatBoxForm
+{
+    position: fixed;
+    z-index: 100;  /*So it goes on top of the previous messages*/
+}
+
+#ChatBoxForm textarea
+{
+    overflow: scroll;
+    height: 20px;
+    resize: none;
+    line-height: 1.2em;
+    padding-left: 3px;
+    padding-top: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 10px;
+}
+
+
+scrollbar
+{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

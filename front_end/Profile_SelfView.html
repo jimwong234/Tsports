@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset = "UTF-8">
+            <title> Profile Self View </title>  <!--Change this to user's name-->        
+            <link rel="stylesheet" type="text/css" href="./assets/css/Profile_SelfView.css">
+            <link rel="stylesheet" type="text/css" href="./assets/css/StatusBar.css">
+            <!--     <script type="text/javascript" src="assets/scripts/jquery-2.2.4.min.js" defer></script>-->
+            
+            <!--Socket.io-->
+            <script src="/socket.io/socket.io.js"></script>
+            
+            <!--DateTimePicker Library-->
+            <link rel="stylesheet" type="text/css" href="./assets/css/jquery.datetimepicker.css"/>
+            <script src="assets/scripts/jquery.js"></script>
+            <script src="assets/scripts/jquery.datetimepicker.full.js"></script>
+            
+            <!--JQuery cookie plugin-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" defer></script>
+            <script type="text/javascript" src="assets/scripts/Profile_SelfView.js" defer></script>
+            <script type="text/javascript" src="assets/scripts/StatusBar.js" defer></script>
+            
+    </head>
+    
+    
+    <body>
+        
+        <!--The notification sound for friend requests, messages, and notifications-->
+        <audio id="NotificationSound"><source src="./assets/sounds/notification.mp3" type="audio/mpeg" /></audio>
+        
+        <!--The top header-->
+       <header id="header">
+           
+          <div id="SiteLogo">
+              <!--Make this a link to your own home page-->
+			  <a href="./Profile_SelfView.html">
+              
+              <img src="./assets/images/TSportsLogo_red.svg" alt="TSportsLogo" />
+			  </a>
+          </div>
+           
+           
+          <nav id="Site_Nav">
+              
+                 <ul id="Main_Nav">
+                     <li>
+                         <form id="SearchBar">
+                             <input type="text" placeholder="Search User" size="35" height="60" id="SearchBarInput" autocomplete="off"/>
+                         </form>
+                     </li>
+                     
+                     
+                    <div id="RightNav">
+                         <li id="HomeButton"><a href="./Profile_SelfView.html"> Home </a> </li>
+                         <li id="FB_Friend_SVG"> <img src="./assets/images/FB_Friend_Notification.svg" alt="FB_Friend_Notification" width="25px" />
+                             <p>  </p>
+                         </li>
+                         <li id="FB_Message_SVG"> <img src="./assets/images/FB_Message_Notification.svg" alt="FB_Messaging" width="25px" />
+                                                <p>  </p>
+                         </li>
+                         
+                         
+                         <li id="FB_Notification_SVG"> <img src="./assets/images/notification.svg" alt="FB_Notification_SVG" width="25px" />
+                             <p>  </p>
+                         </li>
+                         
+                         <li id="SignOut_Button"> Sign Out </li>
+                    </div>
+                     
+                 </ul>
+            
+          </nav>
+
+       </header>
+       
+        <section id="ProfileHeader">
+            
+            <form action="/UploadProfilePic" method="post" enctype="multipart/form-data" id="UploadProfilePic">
+                <label for="file-input">
+                    <img id="EditProfilePic" src="./assets/images/edit.svg" width="20px" alt="UserProfilePic" />
+                </label>
+                <input id="file-input" type="file" name="fileUploaded"/>
+            </form>
+            
+           <img id="ProfilePic" src="" alt="UserProfilePic" />
+           
+           <h2 id="Profile_UserName"> </h2>
+           
+<!--           Paul-->
+    <nav id="allNav">
+            <nav id="BodyNav">
+                
+                <ul>
+                    <li id="UserAbout"> About  </li>
+                    <li id="UserFriends"> Friends </li>
+                    <li id="UserReviews"> Reviews </li>
+                    
+                    <li id="UserEvents"> Events </li>
+                    
+                    <!--User's own view of his/her profile offers more options-->
+                    <li id="SearchEvent">
+                        <img src="./assets/images/searchMagnifier.svg" alt="searchMagnifier" width="15px"/>
+                        <p class="Profile_Tooltip"> Search Events </p>
+                    </li>
+                    <li id="AddEvent">
+                        <img src="./assets/images/AddEvent.svg" alt="searchMagnifier" width="15px"/>
+                        <p class="Profile_Tooltip"> Create Event </p>
+                    </li>
+                    
+                </ul>
+                
+            </nav>
+            
+            <nav id="PassNav">
+                <ul>
+                    <li id="Change_Pass"> Change Password </li>
+                </ul>
+            </nav>
+   
+   </nav>
+  <!-- Paul-->
+            <img src="./assets/images/EventSuccess.svg" alt="EventSucess" width="80px" id="EventSuccessful"/>
+      
+
+        </section>
+        
+        
+    </body>
+
+</html>
+
+

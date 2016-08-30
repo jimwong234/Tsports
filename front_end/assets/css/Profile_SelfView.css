@@ -1,0 +1,1624 @@
+/*Clear the default margin and padding for all elements*/
+*
+{
+    margin:0px;
+    padding:0px;
+    font-family: "Lato","Helvetica Neue", Arial ,Helvetica, sans-serif;
+}
+
+/* Background color*/
+body
+{
+    background-color: rgb(250,250,250);
+    height: 100%;kk
+    width:100%;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+li
+{
+    list-style: none;
+}
+
+
+
+
+
+
+
+
+
+/* Profile style */
+#ProfileHeader
+{
+	height: 100%;
+	width: 200px;
+	position: fixed;
+	z-index: 1;
+	top: 55px;
+	left: 0;
+	background-color: rgba(0,0,0,0.8);
+	overflow-x: hidden;
+	padding-top: 30px;
+	transition: 0.5s;
+    text-align: center;
+}
+
+#ProfilePic
+{
+    margin-top: 0px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 125px;
+    height: 125px;
+    text-align: center;
+}
+
+#EditProfilePic
+{
+    position: absolute;
+    left: 150px;
+    top: 20px;
+    cursor: pointer;
+}
+
+#file-input
+{
+    display: none;
+}
+
+
+#ProfileHeader #Profile_UserName
+{
+    letter-spacing: 1.3px;
+    margin: 10px 0px;
+	font-size: 120%;
+	color: lightgrey;
+}
+
+
+
+#BodyNav, /* paul HERE START(1)  */#PassNav /* paul HERE END(1): Password Nav */
+{
+    background-color: rgb(255,255,255);
+    text-align: center;
+    margin: 0 auto;
+    width: 70%;
+    border-radius: 5px;
+    border: 1px solid rgb(225,225,225);
+    margin-top: 40px;
+}
+
+#BodyNav ul li, /* paul HERE START(2)  */#PassNav ul li /* paul HERE END(2): Password Nav ul li */
+{
+    display: block;
+    padding: 5px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all ease-in-out 0.3s;
+}
+
+#BodyNav ul li:hover, /* paul HERE START(3)  */#PassNav ul li:hover /* paul HERE END(3): Password Nav ul li */
+{
+    background-color: rgb(232, 232, 232);
+}
+
+
+.BodyNavClicked
+{
+    border-bottom: 1px solid black;
+    background-color: rgb(232, 232, 232);
+}
+
+/*Show a tooltip for the search event and add event SVG*/
+#SearchEvent, #AddEvent
+{
+    position: relative;
+}
+
+.Profile_Tooltip
+{
+    visibility: hidden;
+    width: 80px;
+    font-size: 10px;
+    background-color: black;
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+	top: 10%;
+    left: 57%;
+
+}
+
+/*On hover make tooltip available*/
+#SearchEvent:hover .Profile_Tooltip, #AddEvent:hover .Profile_Tooltip
+{
+    visibility: visible;
+}
+
+
+
+
+
+/* Paul About Code Starts here */
+
+textarea, input { outline: none; }
+
+/* About section style */
+#AboutUser
+{
+    position: absolute;
+    margin: auto;
+    margin-left: 27%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 60%;
+    height: 450px;
+    padding: 10px 10px;
+    padding-left: 30px;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+#AboutUser form div.each_info, #AboutUser form div.each_info_stable
+{
+    margin: 10px 10px;
+    float: left;
+    width: 30%;
+}
+
+.dropdown
+{
+    float: left;
+    width: 100%;
+}
+
+/*Change the default input border*/
+#AboutUser .each_info input, #AboutUser .each_info_stable input,
+.dropdown-Campus, .dropdown-Gender
+{
+    border: 1px solid rgb(185, 185, 185);
+}
+
+#AboutUser span.label
+{
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+#AboutUser form div input,
+.dropdown-Campus, .dropdown-Gender
+{
+    width: 100%;
+    font-weight: normal;
+    background-color: white;
+    padding-left: 3px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 3px;
+}
+
+.dropdown-Campus, .dropdown-Gender
+{
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+#AboutUser form div input[name="Birthday"]
+{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+label.Birthday
+{
+    position: absolute;
+    width: 29.5%;
+    margin-bottom: 3px;
+}
+
+label.About_Me
+{
+    position: absolute;
+    top: 235px;
+    left: 40px;
+    width: 30%;
+    margin-bottom: 3px;
+}
+
+#AboutUser form div textarea[name="About_Me"]
+{
+    display: block;
+    position: absolute;
+    padding: 10px 10px;
+    width: 100%;
+    border-radius: 3px;
+    resize: none;
+}
+
+#AboutUser form#info_input
+{
+    width: 100%;
+}
+
+#AboutUser input[disabled], #AboutUser form div textarea[disabled],
+.dropdown-Campus[disabled], .dropdown-Gender[disabled]
+{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#AboutUser button, .submit_button, .change_button
+{
+    margin-left: 10px;
+    margin-bottom: 15px;
+    clear: left;
+    background-color: #555555; /* Black */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 4px;
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.submit_button, .change_button
+{
+    padding: 16px 33px;
+}
+
+#AboutUser input:invalid {
+    color: #000000;
+    background-color: #FFD9D9;
+}
+
+#AboutUser button:hover, .submit_button:hover, .change_button:hover
+{
+    background-color: #008CBA; /* Blue */
+    color: white;
+}
+
+#AboutUser button.cancel_button
+{
+    bottom: 22px;
+    left: 170px;
+    font-size: 16px;
+}
+
+.edit_button, .submit_button
+{
+    top: 385px;
+    
+}
+
+.edit_button, .cancel_button, .submit_button
+{
+    position: absolute;
+    cursor: pointer;
+}
+
+
+#sports{
+    position: absolute;
+    top: 230px;
+    margin-left: 37%;
+}
+
+#sports p
+{
+    margin-bottom: 5px;
+}
+
+
+#ck-collection{
+    border:1px solid lightgrey;
+    border-radius: 4px;
+    width: 365px;
+    height: 118px;
+    position: relative;
+}
+
+.ck-button label{
+    display: inline-block;
+    border: solid 1px lightgrey;
+    background-color: white;
+    font-size: 14px;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+
+.ck-button input{
+    display:none;
+}
+
+input:checked + label {
+    background-color: #97D38D;
+}
+
+input[disabled]:checked + label{
+    background-color: lightgrey;
+}
+
+.ck-button:hover {
+    color: #000000;
+    outline: none !important;
+    border:1px solid lightgrey;
+    border-radius: 4px;
+    box-shadow: 0 0 10px lightgrey;
+}
+
+.ck-button:nth-child(1){
+    position: absolute;
+    margin-left: 6px;
+    margin-top: 5px;
+}
+
+.ck-button:nth-child(2){
+    position: absolute;
+    margin-left: 88px;
+    margin-top: 5px;
+}
+
+.ck-button:nth-child(3){
+    position: absolute;
+    margin-left: 188px;
+    margin-top: 5px;
+}
+
+.ck-button:nth-child(4){
+    position: absolute;
+    margin-left: 272px;
+    margin-top: 5px;
+}
+
+.ck-button:nth-child(5){
+    position: absolute;
+    margin-left: 6px;
+    margin-top: 42px;
+}
+
+.ck-button:nth-child(6){
+    position: absolute;
+    margin-left: 121px;
+    margin-top: 42px;
+}
+
+.ck-button:nth-child(7){
+    position: absolute;
+    margin-left: 230px;
+    margin-top: 42px;
+}
+
+.ck-button:nth-child(8){
+    position: absolute;
+    margin-left: 6px;
+    margin-top: 80px;
+}
+
+.ck-button:nth-child(9){
+    position: absolute;
+    margin-left: 82px;
+    margin-top: 80px;
+}
+
+.ck-button:nth-child(10){
+    position: absolute;
+    margin-left: 177px;
+    margin-top: 80px;
+}
+
+.ck-button:nth-child(11){
+    position: absolute;
+    margin-left: 262px;
+    margin-top: 80px;
+}
+
+/* Paul About Code Ends here */
+
+
+
+
+/* Friends section style */
+#FriendsofUser
+{
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+    padding-top: 100px;
+    padding-left: 15%;
+}
+
+/*Make the Friends display inline-block*/
+#FriendsofUser .Friend
+{
+    display: inline-block;
+    cursor: pointer;
+    margin: 20px 25px;
+}
+
+.FriendImage
+{
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.EventMessageDisplayPic
+{
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#MoreFriendsButton
+{
+    padding: 5px 0px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    transition: all ease-in-out 0.3s;
+    background-color: rgb(255,255,255);
+    font-weight: bold;
+    width: 150px;
+    margin: 15px auto;
+}
+
+/*On Hover,change the background color*/
+#MoreFriendsButton:hover
+{
+    background-color: rgb(232,232,232);
+    color: red;
+}
+
+
+/* Review section style */
+#ReviewsofUser
+{
+    text-align: center;
+    background-color: rgb(255,255,255);
+    margin-bottom: 25px;
+	padding-top: 100px;
+	padding-left: 15%;
+}
+
+#ReviewsofUser #SportsPlayed .SportingEvent
+{
+    display: inline-block;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all ease-in-out 0.3s;
+}
+
+
+#ReviewsofUser #SportsPlayed .SportingEvent:hover
+{
+    background-color: rgb(232, 232, 232);
+}
+
+.SportingEventClicked
+{
+    border-bottom: 1px solid black;
+    background-color: rgb(232, 232, 232);
+}
+
+
+#SportingEventReview
+{
+    text-align: center;
+	padding-left: 15%;
+    margin-bottom: 30px;
+}
+
+
+#SportingEventReview #StarRatings
+{
+    display: inline-block;
+}
+
+/*Space the stars apart*/
+#SportingEventReview #StarRatings img
+{
+    margin: 5px 5px;
+}
+
+/*Comments left by other users*/
+#Comments
+{
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: rgb(255,255,255);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+#Comments ul .Individual_Comment *
+{
+    display: inline-block;
+}
+
+#Comments ul .Individual_Comment
+{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 16px 16px;
+}
+
+#Comments ul .commentTime
+{
+    float: left;
+    margin-right: 30px;
+    width: 20%;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+#Comments ul .commentContent
+{
+    text-align: left;
+    width: 65%;
+    font-weight: 400;
+}
+
+
+
+
+/*Styling the CreateEventSection Section*/
+#CreateEventSection
+{
+    text-align: center;
+    width: 68%;
+    /* margin: 0 auto; */
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.7);
+    padding: 40px 5px;
+	/* padding-top: 20%; */
+	left: 20%;
+	top: 100px;
+    position: absolute;
+}
+
+#CreateEventSection input
+{
+    border: 1px solid white;
+}
+
+/*Make the forms display one below each other*/
+#CreateEventForm .CreateEventLabel
+{
+    display: block;
+    cursor: pointer;
+    margin-bottom: 20px;  /*Space between each input*/
+}
+
+
+.CreateEventLabel *
+{
+    display: block;
+}
+
+.CreateEventLabel input
+{
+    border-radius: 3px;
+    padding: 3px 5px;
+    width: 50%;
+}
+
+
+/*The text next to the input*/
+.CreateEventLabel span
+{
+    color: white;
+    float: left;
+    text-align: right;
+    width: 30%;
+    margin-right: 10px;
+}
+
+
+input[type="submit"],#CreateEventSection input[type="text"], input[type="time"], input[type="number"],
+input[type="datetime-local"]
+{
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/*Width of textarea*/
+.CreateEventLabel textarea
+{
+    width: 50%;
+    padding: 3px 5px;
+    border-radius: 3px;
+    font-size: 15px;
+    resize: none;
+}
+
+/*Create Event Submit Button*/
+#CreateEventSubmit
+{
+    background:none;
+    border:1px solid white;
+    font-size:1em;
+    color: white;
+    border-radius: 8px;
+    padding: 5px 10px 5px 10px;
+    transition: all ease-in-out 0.3s;
+
+}
+
+/*Hover submit button, turn red*/
+#CreateEventSubmit:hover
+{
+    background-color: red;
+    border: 1px solid red;
+}
+
+/*The close event SVG*/
+#CloseEventButton
+{
+    cursor: pointer;
+    position: absolute;
+    left: 90%;
+    top: 5%;
+}
+
+
+/*Blur the background when clicked on create event*/
+.blur-all
+{
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+
+/*    To make it compatible on all browsers*/
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+
+
+/*Event Types Box shown when EventType input is clicked*/
+#AvailableEventTypes
+{
+    border-radius: 5px;
+    margin-top: 3px;
+    width: 50%;
+    background-color: rgb(237,238, 241);
+    position: absolute;
+    left: 31.5%;
+}
+
+.HideAvailableEventTypes
+{
+    display: none;
+}
+
+/*display the <li>s inline-block*/
+#EventTypeLabel #AvailableEventTypes #AvailableEventTypesUL li
+{
+    display: inline-block;
+    padding: 5px 5px;
+    margin: 2px 3px;
+    transition: all ease-in-out 0.3s;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/*When you hover the IndividualEvent li, change the color*/
+#EventTypeLabel #AvailableEventTypes #AvailableEventTypesUL li:hover
+{
+    background-color: white;
+}
+
+/*Make the sport SVG and name inline-block*/
+#EventTypeLabel #AvailableEventTypes #AvailableEventTypesUL li *
+{
+    display: inline-block;
+}
+
+#EventTypeLabel input
+{
+    border-radius: 3px;
+    padding: 3px 5px;
+    width: 48.6%;
+    padding-left: 20px;
+}
+
+
+#AvailableEventTypesUL li p
+{
+    font-size: 11px;
+}
+
+#AvailableEventTypesUL li img
+{
+    padding: 0px 2px;
+}
+
+
+/*Add a mini-calendar SVG to the EventDateTime form input*/
+#EventDateTimeLabel input
+{
+    background: url(../images/calendar.svg) no-repeat 3px 5px;
+    background-size: 14px;
+    background-color: white;
+    padding-left: 20px;
+    width: 48.6%;
+}
+
+/*Make the DateTimePicker smaller*/
+.xdsoft_datetimepicker
+{
+    border-radius: 10px;
+}
+
+/*Add a mini-clock SVG to the EventEndTime form input*/
+#EventEndTimeLabel input
+{
+    background: url(../images/clock.svg) no-repeat 3px 5px;
+    background-size: 14px;
+    background-color: white;
+    padding-left: 20px;
+    width: 48.6%;
+}
+
+
+
+
+
+/*The "Events" Button style*/
+
+
+
+
+/*Styling the #EventsofUser Section*/
+#EventsofUser
+{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    width: 60%;
+    position: absolute;
+    
+    margin-left: 27%;
+    margin-top: 120px;
+}
+
+
+/*Add borders between individual events*/
+#EventsofUser #EventsofUserUL .IndividualEvent
+{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 16px 16px;
+}
+
+/*Make the Div Left Right and Middle inline-block*/
+#EventsofUser #EventsofUserUL .IndividualEvent div
+{
+    display: inline-block;
+}
+
+
+/* Event DateTime*/
+#EventsofUser #EventsofUserUL .IndividualEvent .IndividualEventDateTime
+{
+    color: rgba(0, 0, 0, 0.54);
+    float: left;
+    
+    padding-right: 5%;
+    font-size: 14px;
+}
+
+
+
+/*Event Info*/
+#EventsofUserUL .IndividualEvent .IndividualEventInfo
+{
+  text-align: left;
+  width: 50%;
+}
+
+
+/*Event Name*/
+#EventsofUserUL .IndividualEvent .IndividualEventInfo h3
+{
+    color: rgba(0, 0, 0, 0.54);
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+
+#EventsofUserUL .IndividualEvent .IndividualEventInfo .EventAttendance
+{
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 12px;
+}
+
+
+#EventsofUserUL .IndividualEvent .IndividualEventInfo .EventSpotsLeft
+{
+    font-weight: 600;
+    margin: auto 0.5em;
+    color: #ed1c40;
+    letter-spacing: 0.02em;
+}
+
+
+/*The divRight containing the "+" and "x" SVG*/
+#EventsofUserUL .IndividualEvent .IndividualEventMoreDetail
+{
+    float: right;
+}
+
+/*The Leave Event "x" SVG*/
+#EventsofUserUL .IndividualEvent .IndividualEventMoreDetail img
+{
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/*The Event more detail "+" SVG*/
+#EventsofUserUL .IndividualEvent .IndividualEventMoreDetail .SelectedEventForm
+{
+    cursor: pointer;
+}
+
+#EventsofUserUL .IndividualEvent .IndividualEventMoreDetail input[type=submit]
+{
+    background: url(../images/plus.svg);
+    border: 0;
+    display: block;
+    height: 30px;
+    width: 30px;
+}
+
+
+
+
+/*Searching for Events and the resulting events shown*/
+/*SearchEventsPreview*/
+
+#SearchEventsPreviewBox
+{
+    border-radius: 5px;
+    margin-top: 2px;
+    width: 60%;
+    background-color: rgb(237,238, 241);
+    position: absolute;
+    left: 20%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 200px;
+    border: 1px solid rgb(224, 224, 224);
+}
+
+/*Scroll in Y but hide the scrollbar*/
+/*Chrome Only*/
+::-webkit-scrollbar
+{
+    display: none;
+}
+
+#SearchEventsPreviewBox #SearchEventsUL
+{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+
+/*Add borders between individual events*/
+#SearchEventsPreviewBox #SearchEventsUL .IndividualEventPreview
+{
+    padding: 5px 5px;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    cursor: pointer;
+}
+
+/*/*When hovering over event preview, change background color*/
+#SearchEventsPreviewBox #SearchEventsUL .IndividualEventPreview:hover
+{
+    background-color: rgba(64, 128, 255, 0.3);
+}
+
+/*Make the Div Left Right and Middle inline-block*/
+#SearchEventsPreviewBox #SearchEventsUL .IndividualEventPreview div
+{
+    display: inline-block;
+}
+
+
+/* Event DateTime*/
+#SearchEventsPreviewBox #SearchEventsUL .IndividualEventPreview .IndividualEventDateTime
+{
+    color: rgba(0, 0, 0, 0.54);
+    float: left;
+    font-size: 11px;
+}
+
+
+/*Event Info*/
+#SearchEventsPreviewBox #SearchEventsUL .IndividualEventPreview .IndividualEventInfo
+{
+    text-align: left;
+    width: 50%;
+}
+
+
+/*Event Name*/
+#SearchEventsPreviewBox #SearchEventsUL .IndividualEventPreview .IndividualEventInfo h3
+{
+    color: rgba(0, 0, 0, 0.54);
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-bottom: 1px;
+}
+
+
+#SearchEventsPreviewBox #SearchEventsUL .IndividualEventPreview .IndividualEventInfo .EventAttendance
+{
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 10px;
+}
+
+#SearchEventsPreviewBox #SearchEventsUL .IndividualEventPreview .IndividualEventInfo .EventSpotsLeft
+{
+    font-weight: 600;
+    font-size: 9px;
+    margin: auto 0.5em;
+    color: #ed1c40;
+    letter-spacing: 0.01em;
+}
+
+
+
+
+/*Details for a specific Event*/
+/*Return2Events Button*/
+
+#SelectedEvent
+{
+    text-align: center;
+    width: 60%;
+    position: absolute;
+    margin-left: 27%;
+    margin-top: 90px;
+}
+
+#SelectedEvent .Return2Events
+{
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+
+#SelectedEvent h3
+{
+    color: rgba(0, 0, 0, 0.54);
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+#SelectedEvent .BasicEventInfo_Wrapper
+{
+    text-align: left;
+    margin-left: 35%;
+    background-color: rgb(255,255,255);
+    border: 1px solid rgb(225,225,225);
+    border-radius: 4px;
+    width: 25%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 15px 15px;
+}
+
+
+#SelectedEvent .EventSportName *
+{
+    display: inline-block;
+    margin: 0px 2px;
+}
+
+#SelectedEvent .EventSportName
+{
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+#SelectedEvent .EventDateTime *
+{
+    display: inline-block;
+    margin: 0px 2px;
+}
+
+#SelectedEvent .EventDateTime
+{
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+#SelectedEvent .EventDuration *
+{
+    display: inline-block;
+    margin: 0px 2px;
+}
+
+#SelectedEvent .EventDuration
+{
+    margin-bottom: 7px;
+    font-size: 13px;
+}
+
+#SelectedEvent .EventLocation *
+{
+    display: inline-block;
+    margin: 0px 2px;
+}
+
+#SelectedEvent .EventLocation
+{
+    margin-bottom: 7px;
+    font-size: 13px;
+}
+
+
+
+#SelectedEvent .EventAttendance
+{
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 11px;
+    padding-left: 5px;
+}
+
+
+#SelectedEvent .EventSpotsLeft
+{
+    font-weight: 600;
+    margin: auto 0.5em;
+    color: #ed1c40;
+    letter-spacing: 0.02em;
+}
+
+#SelectedEvent .EventDescription
+{
+    background-color: rgb(255,255,255);
+    border: 1px solid rgb(225,225,225);
+    border-radius: 4px;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 15px 15px;
+}
+
+
+.UserImages
+{
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#SelectedEvent #EventAdmin
+{
+    margin-bottom: 25px;
+}
+
+#SelectedEvent #EventUsers
+{
+    margin-bottom: 40px;
+}
+
+/*Show all the users in the event inline-block*/
+#SelectedEvent #EventUsers div
+{
+    display: inline-block;
+    cursor: pointer;
+    margin: 20px 25px;
+}
+
+
+
+
+/*Group chat among users in the event*/
+#SelectedEvent #EventGroupChat
+{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgb(237, 238, 241);
+    border: 1px solid rgb(225,225,225);
+    border-radius: 4px;
+    margin-bottom: 40px;
+}
+
+/*GroupChat Content*/
+#SelectedEvent #EventGroupChat #GroupChatContent
+{
+    padding: 5px 5px;
+    height: 290px;
+    overflow: scroll;
+}
+
+/*Display the sent by profile pic and the message in-line*/
+#SelectedEvent #EventGroupChat #GroupChatContent .ChatContentDatas *
+{
+    display: inline-block;
+}
+
+#SelectedEvent #EventGroupChat #GroupChatContent .ChatContentDatas img
+{
+    margin-right: 3px;
+}
+
+
+/*Alternate the Chat Data like Facebook*/
+#SelectedEvent #EventGroupChat #GroupChatContent .MessageNotByMe
+{
+    float: right;
+    text-align: left;  /*Message is left-aligned*/
+    border: 1px solid rgb(213, 213, 213);
+    background-color: rgb(254, 254, 254);
+    border-radius: 3px;
+    width: 50%;
+    word-wrap:break-word;
+}
+
+/*My messages are left aligned*/
+#SelectedEvent #EventGroupChat #GroupChatContent .MessageByMe
+{
+    float: left;
+    text-align: left; /*Message is left-aligned*/
+    border: 1px solid rgb(188, 199, 214);
+    background-color: rgb(224, 237, 255);
+    border-radius: 9px;
+    border-bottom-left-radius: 0px;
+    width: 50%;
+    word-wrap:break-word;
+}
+
+/*Give the last message a margin-below so it doesn't overlap with the form*/
+#SelectedEvent #EventGroupChat #GroupChatContent .ChatContentDatas:last-child
+{
+    margin-bottom: 5px;
+}
+
+#SelectedEvent #EventGroupChat #GroupChatContent .ChatContentDatas
+{
+    font-size: 13px;
+    padding: 3px 3px;
+    margin: 3px 3px;
+}
+
+
+
+/*GroupChat Form*/
+#SelectedEvent #EventGroupChat #GroupChatForm textarea
+{
+    overflow: scroll;
+    height: 25px;
+    resize: none;
+    line-height: 1.2em;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 5px;
+    border-radius: 3px;
+    border: 1px solid black;
+    font-size: 12px;
+}
+
+
+/*Event Rating*/
+#EventRating
+{
+    text-align: center;
+    width: 100%;
+    margin: 50px auto;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.7);
+    padding: 40px 5px;
+}
+
+#EventRating #RatingHeader
+{
+    color: red;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+#EventRating .EventRatingIndividualUser
+{
+    padding: 10px 40px;
+}
+
+
+/*Only affect child elements one level down*/
+#EventRating .EventRatingIndividualUser > *
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*Display the user pic and name inline-block*/
+#EventRating .EventRatingIndividualUser .UserRatingInfo *
+{
+    display: inline-block;
+}
+
+
+#EventRating .EventRatingIndividualUser .UserRatingInfo
+{
+    color: white;
+    float: left;
+    text-align: left;
+    width: 22%;
+    margin-right: 10px;
+}
+
+#EventRating .EventRatingIndividualUser .UserRatingInfo img
+{
+    border-radius: 50%;
+    overflow: hidden;
+    padding-right: 5px;
+}
+
+
+#EventRating textarea
+{
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 15px;
+    width: 50%;
+    padding: 3px 5px;
+    border-radius: 3px;
+    resize: none;
+    margin-right: 10px;
+}
+
+
+#EventRating .EventRatingIndividualUser .UserStarRating img
+{
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+
+/*Submit Ratings*/
+#SubmitRatings
+{
+    background:none;
+    border:1px solid white;
+    font-size:1em;
+    color: white;
+    border-radius: 8px;
+    padding: 5px 10px 5px 10px;
+    transition: all ease-in-out 0.3s;
+    margin-top: 10px;
+}
+
+/*Hover submit button, turn red*/
+#SubmitRatings:hover
+{
+    background-color: red;
+    border: 1px solid red;
+}
+
+
+
+
+
+/*Search for Events*/
+#SearchEventSection
+{
+    text-align: center;
+    width: 60%;
+    position: absolute;
+    margin-left: 27%;
+    margin-top: 110px;
+}
+
+#SearchEventSection input#SearchForEvents
+{
+    line-height: 2.3em;
+    padding-left: 20px;
+    border-radius: 3px;
+    border: 1px solid black;
+    width: 280px;
+    cursor: pointer;
+}
+
+
+
+/*Event Types Box shown when EventType input is clicked*/
+#SearchEventSection #AvailableEventTypes
+{
+    border-radius: 5px;
+    margin-top: 3px;
+    width: 35%;
+    background-color: rgb(237,238, 241);
+    position: absolute;
+    left: 33%;
+}
+
+/*display the <li>s inline-block*/
+#SearchEventSection #AvailableEventTypes #AvailableEventTypesUL li
+{
+    display: inline-block;
+    padding: 5px 5px;
+    margin: 2px 3px;
+    transition: all ease-in-out 0.3s;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/*When you hover the IndividualEvent li, change the color*/
+#SearchEventSection #AvailableEventTypes #AvailableEventTypesUL li:hover
+{
+    background-color: white;
+}
+
+/*Make the sport SVG and name inline-block*/
+#SearchEventSection #AvailableEventTypes #AvailableEventTypesUL li *
+{
+    display: inline-block;
+}
+
+
+
+/*Event Successfully Created*/
+#EventSuccessful
+{
+    position: fixed;
+    left: 55%;
+    top: 100px;
+    display: none; /*Don't intially display it*/
+}
+
+
+/*Join Event Button*/
+.JoinEvent
+{
+    position: fixed;
+    cursor: pointer;
+    background-color: rgb(116, 173, 27);
+    width: 100px;
+    color: white;
+    border: 2px solid rgb(116, 173, 27);
+    border-radius: 10px;
+    padding: 5px 5px;
+    left: 75%;
+
+}
+
+.JoinEvent:hover
+{
+    position: fixed;
+    background-color: rgba(116, 173, 27, 0.8);
+}
+
+
+/*******************ADDED BY PAUL: PASSWORD CHANGE*********************************************/
+
+/***************** Change Password Section START *********************/
+
+#PasswordChange
+{
+    /* 	font-family: 'Rokkitt'; */
+    
+    position: absolute;
+    margin: auto;
+    margin-left: 27%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 500px;
+    height: 350px;
+    padding: 10px 10px;
+    padding-top: 60px;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+#PasswordChange p
+{
+    font-family: 'Rokkitt';
+    
+    margin-left: 135px;
+    margin-right: 135px;
+    margin-bottom: 0px;
+    padding: 5px 5px;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgba(0, 68, 102, 0.6);
+    /* background-color: #2a2222; */
+    
+}
+
+#PasswordChange form input.password
+{
+    background: url(../images/password-icon.png) no-repeat scroll 7px 7px;
+    background-size: 30px 30px;
+    width: 200px;
+    height: 40px;
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: white;
+    padding-left: 43px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    
+    border: 2px solid #004466;
+    border-radius: 10px;
+    
+    
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#PasswordChange form input.password:focus
+{
+    color: #000000;
+    outline: none !important;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+#PasswordChange input.password:invalid {
+    color: #000000;
+    background-color: #FFD9D9;
+}
+
+#PasswordChange form input.change_button
+{
+    margin: auto;
+    margin-top: 20px;
+    background-color: #00334d;
+}
+
+#PasswordChange form input.change_button:hover
+{
+    background-color: #008CBA; /* Blue */
+    color: white;
+}
+
+#passwordChangeApproved
+{
+    position: absolute;
+    top: -75px;
+    left: 45%;
+}
+
+#error_msg
+{
+    position: absolute;
+    display: block;
+    top: 86%;
+    left: 22%;
+    background-color: rgba(255,217,217,0.5);
+}
+
+
+/***************** Change Password Section END ***********************/
+
+
+/*******************ADDED BY PAUL: PASSWORD CHANGE**********************************************/
+
+
+
+/*This viewport
+ 
+ is the same as the viewport for 320px*/
+/*The hover nav bar works and elements did not need to be varied*/
+@media screen and (max-width: 480px)
+{
+
+
+
+
+}
+
+
+
+
+/*For all viewports from 768px until 1024px*/
+@media screen and (max-width: 768px)
+{
+    
+/*    top nav search bar*/
+    #SearchBar
+    {
+        float: left;
+        margin-left: 0px;
+    }
+    
+    #SearchBar input[type="text"] {
+        width: 150px;
+        border: 1px solid black;
+    }
+
+    #Main_Nav li
+    {
+        margin: 7px 2px;
+    }
+
+    
+/*   Displayed Information about the "Events" button*/
+
+    #EventsofUserUL .IndividualEvent .IndividualEventInfo
+    {
+        text-align: left;
+        width: 40%;
+    }
+    
+/*    Make the font-size smaller*/
+    #EventsofUser #EventsofUserUL .IndividualEvent .IndividualEventDateTime
+    {
+        padding-right: 0px;
+        font-size: 12px;
+        width: 20%;
+    }
+    
+/*    Make the Event Name smaller*/
+    #EventsofUserUL .IndividualEvent .IndividualEventInfo h3
+    {
+        font-size: 14px;
+    }
+
+
+}
+
+
+
+/*This viewport is the same as the viewport for 768px*/
+/*The hover nav bar for 768 is similar to this viewport and elements did not need to be varied*/
+@media screen and (min-width: 1024px)
+{
+ 
+    
+    
+    
+}
+
+
+
+/*This viewport is the same as the viewport for 768px*/
+/*The hover nav bar for 768 is similar to this viewport and elements did not need to be varied*/
+@media screen and (min-width: 1280px)
+{
+
+
+}
+
+
+
+
+
+
+
+

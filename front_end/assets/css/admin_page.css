@@ -1,0 +1,467 @@
+/*Clear the default margin and padding for all elements*/
+*
+{
+    margin:0px;
+    padding:0px;
+    font-family: "Lato","Helvetica Neue", Arial ,Helvetica, sans-serif;
+}
+
+/* Background color*/
+body
+{
+    background-color: rgb(245,245,245);
+    height: 100%;
+    width:100%;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+li
+{
+    list-style: none;
+}
+
+/* header: top menu */
+#header
+{
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 55px;
+    z-index: 1000;  /*To prevent images from overlapping the fixed header*/
+    position: fixed;
+}
+
+
+#SiteLogo img
+{
+    margin-left: 4px;
+    margin-top: 6px;
+	height: 42px;
+    width: 150px;
+    float: left;
+}
+
+#Site_Nav
+{
+    padding-top: 5px;
+    float: right;
+    padding-right: 20px;
+}
+
+#Site_Nav a
+{
+    color: #74AD1B;
+}
+
+#Main_Nav li
+{
+    display: inline-block;
+    margin: 7px 7px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#HomeButton a
+{
+    padding-top:23px;
+    padding-bottom:18px;
+    padding-left: 9px;
+    padding-right: 9px;
+    color: #74AD1B;
+    font-size: 15px;
+}
+
+#AdminName
+{
+    color: #74AD1B;
+}
+
+/*Make the links bold on hover*/
+#Main_Nav #HomeButton a:hover
+{
+    color: #A0F6F6;
+    transition: all ease-in-out 0.3s;
+    background-color: #111111;
+}
+
+/*Add a border to the SignOut_Button button*/
+#SignOut_Button
+{
+    transition: all ease-in-out 0.3s;
+    border: 2px solid #74AD1B;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #74AD1B;
+}
+
+
+/*Make the links bold on hover*/
+#SignOut_Button:hover
+{
+   color: #A0F6F6;
+}
+
+/* AdminDashboard style */
+#AdminDashboard
+{
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 55px;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    overflow-x: hidden;
+    padding-top: 30px;
+    transition: 0.5s;
+    text-align: center;
+}
+
+#AdminPic
+{
+    margin-top: 0px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 125px;
+    height: 125px;
+    text-align: center;
+}
+
+.AdminName
+{
+    letter-spacing: 1.3px;
+    margin: 10px 0px;
+    font-size: 120%;
+    color: lightgrey;
+}
+
+#Controllers
+{
+    background-color: rgb(255,255,255);
+    text-align: center;
+    margin: 0 auto;
+    width: 70%;
+    border-radius: 4px;
+    border: 1px solid rgb(225,225,225);
+    margin-top: 40px;
+}
+
+#Controllers ul li
+{
+    display: block;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all ease-in-out 0.3s;
+}
+
+#Controllers ul li:hover
+{
+    background-color: rgb(232, 232, 232);
+}
+
+#ResultShowBoard #allUsersInfo{
+    position: absolute;
+    left: 340px;
+    top: 150px;
+    background-color: white;
+    border-radius: 4px; 
+}
+
+#ResultShowBoard #allUsersInfo *{
+    font-family: 'Rokkitt';
+}
+
+
+#ResultShowBoard .user_info{
+    border-bottom: 2px solid rgb(240,240,240);
+    position: relative;
+    width: 800px
+}
+
+
+#ResultShowBoard .user_img{
+    margin-top: 0px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    padding: 15px;
+}
+
+#ResultShowBoard .user_name{
+    position: absolute;
+    top:18px;
+    font-size: 21px;
+    color: #74AD1B;
+}
+
+#ResultShowBoard .user_email{
+    position: absolute;
+    top:38px;
+    left:74px;
+    color: grey;
+}
+
+#ResultShowBoard .user_gender{
+    position: absolute;
+    top:15px;
+    left:260px;
+}
+
+#ResultShowBoard .user_birthday{
+    position: absolute;
+    top:15px;
+    left:360px;
+}
+
+#ResultShowBoard .user_height{
+    position: absolute;
+    top:33px;
+    left:260px;
+}
+
+#ResultShowBoard .user_weight{
+    position: absolute;
+    top:33px;
+    left:340px;
+}
+
+#ResultShowBoard .user_campus{
+    position: absolute;
+    top:15px;
+    left:490px;
+}
+
+#ResultShowBoard .user_phone{
+    position: absolute;
+    top:33px;
+    left:425px;
+}
+/*start change password form*/
+#ResultShowBoard .ps_text{
+    position: absolute;
+    top:51px;
+    left:260px;
+}
+
+#ResultShowBoard .user_password{
+    position: absolute;
+    top:49px;
+    left:327px;
+    font-size: 15px;
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 140px;
+    border-radius:2px;
+    border: 1px solid lightgrey; 
+}
+
+#ResultShowBoard .user_password:focus{
+    color: #000000;
+    outline: none !important;
+    border:1px solid #93C7F2;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+#ResultShowBoard .changebtn{
+    position: absolute;
+    width: 28px;
+    top:19px;
+    left:700px;
+    height: 28px;
+    
+}
+
+/*end change password form*/
+
+#ResultShowBoard .user_delete{
+    cursor: pointer;
+    position: absolute;
+    top:20px;
+    left:750px;
+    width: 30px;
+    height: 30px;
+}
+
+#ResultShowBoard #allEventsInfo{
+    position: absolute;
+    left: 340px;
+    top: 150px;
+    background-color: white;
+    border-radius: 4px; 
+}
+
+#ResultShowBoard #allEventsInfo *{
+    font-family: 'Rokkitt';
+}
+
+#ResultShowBoard .event_info{
+    border-bottom: 2px solid rgb(240,240,240);
+    position: relative;
+    width: 800px
+}
+
+#ResultShowBoard .eventtype{
+    overflow: hidden;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+#ResultShowBoard .event_name{
+    position: absolute;
+    top:23px;
+    font-size: 21px;
+    color: #74AD1B;
+}
+
+#ResultShowBoard .owner_name{
+    position: absolute;
+    top:45px;
+    left:65px;
+    color: grey;
+}
+
+#ResultShowBoard .attendance{
+    position: absolute;
+    top:23px;
+    left:260px;
+}
+
+#ResultShowBoard .numppl{
+    position: absolute;
+    top:23px;
+    left:383px;
+    color: red;
+}
+
+#ResultShowBoard .location{
+    position: absolute;
+    top:23px;
+    left:467px;
+}
+
+#ResultShowBoard .eventCalendar{
+    position: absolute;
+    top:45px;
+    left:260px;
+}
+
+#ResultShowBoard .datetime{
+    position: absolute;
+    top:48px;
+    left:285px;
+}
+
+#ResultShowBoard .clock{
+    position: absolute;
+    top:45px;
+    left:410px;
+}
+
+#ResultShowBoard .hours{
+    position: absolute;
+    top:48px;
+    left:435px;
+}
+
+#ResultShowBoard .event_delete{
+    cursor: pointer;
+    position: absolute;
+    top:20px;
+    left:760px;
+    width: 15px;
+    height: 15px;
+}
+
+#ResultShowBoard .eventid{
+    display: none
+}
+
+#ResultShowBoard #allStatusInfo{
+    position: absolute;
+    left: 550px;
+    top: 150px;
+    background-color: white;
+    border-radius: 4px; 
+    border: 2px solid rgb(240,240,240);
+    width: 350px;
+    height: 400px;
+}
+
+#ResultShowBoard #allStatusInfo *{
+    font-family: 'Rokkitt';
+}
+
+#ResultShowBoard #numberOfUsersText{
+    position: absolute;
+    left: 50px;
+    top:80px;
+    font-size: 21px;
+    color: #74AD1B;
+}
+
+#ResultShowBoard #numberOfUsers{
+    position: absolute;
+    left: 150px;
+    top:80px;
+    font-size: 21px;
+}
+
+#ResultShowBoard #numberOfEventsText{
+    position: absolute;
+    left: 50px;
+    top:120px;
+    font-size: 21px;
+    color: #74AD1B;
+}
+
+#ResultShowBoard #numberOfEvents{
+    position: absolute;
+    left: 160px;
+    top:120px;
+    font-size: 21px;
+}
+
+#ResultShowBoard #popularSportsText{
+    position: absolute;
+    left: 50px;
+    top:160px;
+    font-size: 21px;
+    color: #74AD1B;
+}
+
+#ResultShowBoard #popularSports{
+    position: absolute;
+    left: 183px;
+    top:160px;
+    font-size: 21px;
+}
+
+#ResultShowBoard #headerText{
+    position: absolute;
+    left: 120px;
+    top:35px;
+    font-size: 21px;
+    color:red;
+}
+
+
+.ps_hid{
+    display: none;
+}
+
+
+

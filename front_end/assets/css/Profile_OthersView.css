@@ -1,0 +1,511 @@
+/*Clear the default margin and padding for all elements*/
+*
+{
+    margin:0px;
+    padding:0px;
+    font-family: "Lato","Helvetica Neue", Arial ,Helvetica, sans-serif;
+}
+
+/* Background color*/
+body
+{
+    background-color: rgb(250,250,250);
+    height: 100%;
+    width:100%;
+    position: relative;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+li
+{
+    list-style: none;
+}
+
+
+
+/* Profile Style */
+#ProfileHeader
+{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#ProfilePic
+{
+    margin-top: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 175px;
+    height: 175px;
+    text-align: center;
+}
+
+#ProfileHeader #Profile_UserName
+{
+    letter-spacing: 1.5px;
+    margin: 10px 0px;
+}
+
+
+/*Adding a user as a friend or messaging a user*/
+#ProfileHeader .Add_Message_User
+{
+    display: inline-block;
+}
+
+#AddFriend, #MessageUser
+{
+    border: 1px solid rgb(52,65,61);
+    background-color: rgb(255, 255, 255);
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-size: 10px;
+    margin-right: 14px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    margin-bottom: 35px;
+}
+
+#AddFriend:hover, #MessageUser:hover
+{
+    background-color: rgb(232, 232, 232);
+}
+
+
+#AddFriend *, #MessageUser *
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+#BodyNav
+{
+    background-color: rgb(255,255,255);
+    text-align: center;
+    margin: 0 auto;
+    width: 30%;
+
+    border-radius: 5px;
+    border: 1px solid rgb(185,185,185);
+    box-shadow: 6px 6px 2px rgb(185,185,185);
+}
+
+#BodyNav ul li
+{
+    display: inline-block;
+    padding: 5px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all ease-in-out 0.3s;
+}
+
+#BodyNav ul li:hover
+{
+    background-color: rgb(232, 232, 232);
+}
+
+.BodyNavClicked
+{
+    border-bottom: 1px solid black;
+    background-color: rgb(232, 232, 232);
+}
+
+
+
+/* About section style */
+/*Paul Starts*/
+
+
+#AboutUser
+{
+    position: absolute;
+    margin: auto;
+    margin-left: 20%;
+    margin-bottom: 10%;
+    width: 60%;
+    height: 385px;
+    padding: 10px 10px;
+    padding-left: 30px;
+    padding-top: 20px;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+#AboutUser form div.each_info, #AboutUser form div.each_info_stable
+{
+    margin: 10px 10px;
+    float: left;
+    width: 30%;
+}
+
+.dropdown
+{
+    float: left;
+    width: 100%;
+}
+
+/*Change the default input border*/
+#AboutUser .each_info input, #AboutUser .each_info_stable input,
+.dropdown-Campus, .dropdown-Gender
+{
+    border: 1px solid rgb(185, 185, 185);
+}
+
+#AboutUser span.label
+{
+    display: inline-block;
+}
+
+#AboutUser form div input,
+.dropdown-Campus, .dropdown-Gender
+{
+    width: 100%;
+    font-weight: normal;
+    background-color: white;
+    padding-left: 3px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 10px;
+}
+
+.dropdown-Campus, .dropdown-Gender
+{
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+#AboutUser form div input[name="Birthday"]
+{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+label.Birthday
+{
+    position: absolute;
+    width: 29.5%;
+}
+
+label.About_Me
+{
+    position: absolute;
+    top: 245px;
+    left: 40px;
+    width: 30%;
+}
+
+#AboutUser form div textarea[name="About_Me"]
+{
+    display: block;
+    position: absolute;
+    padding: 10px 10px;
+    width: 100%;
+    border-radius: 10px;
+    resize: none;
+}
+
+#AboutUser form#info_input
+{
+    width: 100%;
+}
+
+#AboutUser input[disabled], #AboutUser form div textarea[disabled],
+.dropdown-Campus[disabled], .dropdown-Gender[disabled]
+{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#sports{
+    position: absolute;
+    top: 240px;
+    margin-left: 35%;
+}
+
+#ck-collection{
+    border:1px solid lightgrey;
+    border-radius: 4px;
+    width: 365px;
+    height: 118px;
+    position: relative;
+}
+
+.ck-button label{
+    display: inline-block;
+    border: solid 1px lightgrey;
+    background-color: white;
+    font-size: 14px;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+.ck-button input{
+    display:none;
+}
+
+input[disabled]:checked + label{
+    background-color: lightgrey;
+}
+
+.ck-button:nth-child(1){
+    position: absolute;
+    margin-left: 6px;
+    margin-top: 5px;
+}
+
+.ck-button:nth-child(2){
+    position: absolute;
+    margin-left: 88px;
+    margin-top: 5px;
+}
+
+.ck-button:nth-child(3){
+    position: absolute;
+    margin-left: 188px;
+    margin-top: 5px;
+}
+
+.ck-button:nth-child(4){
+    position: absolute;
+    margin-left: 272px;
+    margin-top: 5px;
+}
+
+.ck-button:nth-child(5){
+    position: absolute;
+    margin-left: 6px;
+    margin-top: 42px;
+}
+
+.ck-button:nth-child(6){
+    position: absolute;
+    margin-left: 121px;
+    margin-top: 42px;
+}
+
+.ck-button:nth-child(7){
+    position: absolute;
+    margin-left: 230px;
+    margin-top: 42px;
+}
+
+.ck-button:nth-child(8){
+    position: absolute;
+    margin-left: 6px;
+    margin-top: 80px;
+}
+
+.ck-button:nth-child(9){
+    position: absolute;
+    margin-left: 82px;
+    margin-top: 80px;
+}
+
+.ck-button:nth-child(10){
+    position: absolute;
+    margin-left: 177px;
+    margin-top: 80px;
+}
+
+.ck-button:nth-child(11){
+    position: absolute;
+    margin-left: 262px;
+    margin-top: 80px;
+}
+
+
+/*Paul Ends*/
+
+
+
+/* Friends section style */
+#FriendsofUser
+{
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+}
+
+/*Make the Friends display inline-block*/
+#FriendsofUser .Friend
+{
+    display: inline-block;
+    cursor: pointer;
+    margin: 20px 25px;
+}
+
+.FriendImage
+{
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+#MoreFriendsButton
+{
+	padding: 5px 0px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    transition: all ease-in-out 0.3s;
+    background-color: rgb(255,255,255);
+    font-weight: bold;
+    width: 150px;
+    margin: 15px auto;
+}
+
+/*On Hover,change the background color*/
+#MoreFriendsButton:hover
+{
+    background-color: rgb(232,232,232);
+    color: red;
+}
+
+/* Review section style */
+#ReviewsofUser
+{
+    text-align: center;
+    background-color: rgb(255,255,255);
+    margin-bottom: 25px;
+}
+
+#ReviewsofUser #SportsPlayed .SportingEvent
+{
+    display: inline-block;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all ease-in-out 0.3s;
+}
+
+
+#ReviewsofUser #SportsPlayed .SportingEvent:hover
+{
+    background-color: rgb(232, 232, 232);
+}
+
+.SportingEventClicked
+{
+    border-bottom: 1px solid black;
+    background-color: rgb(232, 232, 232);
+}
+
+
+#SportingEventReview
+{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+#SportingEventReview #StarRatings
+{
+    display: inline-block;
+}
+
+/*Space the stars apart*/
+#SportingEventReview #StarRatings img
+{
+    margin: 5px 5px;
+}
+
+
+
+
+/*Comments left by other users*/
+#Comments
+{
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: rgb(255,255,255);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+#Comments ul .Individual_Comment *
+{
+    display: inline-block;
+}
+
+#Comments ul .Individual_Comment
+{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 16px 16px;
+}
+
+#Comments ul .commentTime
+{
+    float: left;
+    margin-right: 30px;
+    width: 20%;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+#Comments ul .commentContent
+{
+    text-align: left;
+    width: 65%;
+    font-weight: 400;
+}
+
+
+
+
+/*This viewport is the same as the viewport for 320px*/
+/*The hover nav bar works and elements did not need to be varied*/
+@media screen and (min-width: 480px)
+{
+
+
+
+
+}
+
+
+
+
+/*For all viewports from 768px until 1024px*/
+@media screen and (min-width: 768px)
+{
+
+ 
+
+}
+
+
+
+/*This viewport is the same as the viewport for 768px*/
+/*The hover nav bar for 768 is similar to this viewport and elements did not need to be varied*/
+@media screen and (min-width: 1024px)
+{
+ 
+    
+    
+    
+}
+
+
+
+/*This viewport is the same as the viewport for 768px*/
+/*The hover nav bar for 768 is similar to this viewport and elements did not need to be varied*/
+@media screen and (min-width: 1280px)
+{
+
+
+}
+
+
+
+
+
+
+
+

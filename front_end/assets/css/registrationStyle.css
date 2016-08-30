@@ -1,0 +1,518 @@
+
+/*Clear the default margin and padding for all elements*/
+#header *
+{
+    margin:0px;
+    padding:0px;
+    font-family: "Lato","Helvetica Neue", Arial ,Helvetica, sans-serif;
+}
+
+#header{
+    position: absolute;
+    top:0px; 
+    left:0px;
+}
+
+/* Background color*/
+body
+{
+    background-color: rgb(250,250,250);
+    height: 100%;
+    width:100%;
+    position: relative;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+li
+{
+    list-style: none;
+}
+
+#header
+{
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    z-index: 1000;  /*To prevent images from overlapping the fixed header*/
+    border-bottom: 1px solid #36414c;
+}
+
+
+#SiteLogo img
+{
+    margin-left: 4px;
+    margin-top: 6px;
+    height: 42px;
+    width: 150px;
+    margin-right: 30px;
+}
+
+
+#SiteLogo
+{
+    float: left;
+}
+
+/*display the nav bar as in-line block*/
+nav div
+{
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 14px;
+}
+
+#Main_Nav
+{
+    margin-top: 0px;
+}
+
+#Main_Nav ul li
+{
+    float: left;
+}
+
+#Main_Nav ul a
+{
+    padding-top:20px;
+    padding-bottom:17px;
+    padding-left: 6px;
+    padding-right: 6px;
+    display: block;
+    border-bottom: 2px solid transparent;  /*When we hover, border appears*/
+    transition: all ease-in-out 0.3s;
+}
+
+/*Make the links bold on hover*/
+#Main_Nav ul a:hover
+{
+    color: #A0F6F6;
+    background: #111111;
+}
+
+#Home_Buttons
+{
+    float: right;
+    margin-right: 30px;
+    margin-top: 12px;
+}
+
+#Home_Buttons ul li
+{
+    display: inline-block;
+    margin: 0px 10px;  /*Space the buttons out*/
+}
+
+
+/*When hovering on the register or login button, turn it red*/
+#Register_Button a
+{
+    padding-top:18px;
+    padding-bottom:19px;
+    padding-left: 6px;
+    padding-right: 6px;
+    transition: all ease-in-out 0.3s;
+}
+
+/*Add a border to the login button*/
+#Login_Button
+{
+    border: 2px solid #74AD1B;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+/*Make the links bold on hover*/
+#Login_Button a:hover
+{
+   color: #A0F6F6;
+}
+
+/*Make the links bold on hover*/
+#Register_Button a:hover
+{
+   color: #A0F6F6;
+   background-color: #111111;
+}
+
+/*Make the color of the nav bar menu items nice green color*/
+#Main_Nav a
+{
+    color: #74AD1B;
+}
+
+#Home_Buttons a
+{
+    color: #74AD1B;
+}
+
+main{
+    background:#fff;
+    padding-left: 30px;
+    padding-top: 20px;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width:750px;
+    height:500px;
+    position: relative;
+    border-radius: 12px;
+    border: 1px solid rgb(225,225, 225);
+}
+
+main{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+form{
+    position: relative;
+}
+
+form p{
+    font-size: 16px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+form input{
+    width: 325px;
+    height: 35px;
+    border-radius:4px;
+    border: 1px solid lightgrey; 
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+form input:focus{
+    color: #000000;
+    outline: none !important;
+    border:1px solid #93C7F2;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+#firstname{
+    position: absolute;
+    padding-left: 10px;
+}
+
+#lastname{
+    position: absolute;
+    left: 265px;
+    margin-left: 100px;
+}
+
+#birthday{
+    position: absolute;
+    top: 70px;
+    margin-left: 10px;
+}
+
+#birthday input{
+    width: 180px;
+}
+
+#gender{
+    position: absolute;
+    top: 70px;
+    margin-left: 212px;
+    font-family:'Lucida Grande', Tahoma, Verdana, sans-serif;
+    color: #000;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 35px;
+  width: 118px;
+  background: #fff;
+  border: 1px solid;
+  border-color: lightgrey;
+  border-radius: 3px;
+}
+.dropdown:before, .dropdown:after {
+  content: '';
+  position: absolute;
+  z-index: 20;
+  top: 12px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 4px dashed;
+  border-color: #888 transparent;
+  pointer-events: none;
+}
+.dropdown:before {
+  border-bottom-style: solid;
+  border-top: none;
+}
+.dropdown:after {
+  margin-top: 7px;
+  border-top-style: solid;
+  border-bottom: none;
+}
+
+.dropdown-select {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 8px 2px 6px 10px;
+  height: 35px;
+  line-height: 18px;
+  font-size: 14px;
+  color: grey;
+  text-shadow: 0 1px white;
+  /* Fallback for IE 8 */
+  background: #f2f2f2;
+  /* "transparent" doesn't work with Opera */
+  background: rgba(0, 0, 0, 0) !important;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+.dropdown-select:focus {
+  width: 100%;
+  color: #000000;
+  outline: none !important;
+  border:2px solid #93C7F2;
+  box-shadow: 0 0 10px #719ECE;
+}
+
+#height{
+    position: absolute;
+    top: 70px;
+    margin-left: 345px;
+}
+
+#height input{
+    width: 160px;
+    height: 34px;
+}
+
+#weight{
+    position: absolute;
+    top: 70px;
+    margin-left: 530px;
+}
+
+#weight input{
+    width: 160px;
+    height: 34px;
+}
+
+#email{
+    position: absolute;
+    top: 138px;
+    margin-left: 10px;
+}
+
+#email input{
+    width: 280px;
+    height: 34px;
+}
+
+#phone{
+    position: absolute;
+    top: 138px;
+    margin-left: 320px;
+}
+
+#phone input{
+    width: 230px;
+    height: 34px;
+}
+
+#campus{
+    position: absolute;
+    top: 138px;
+    margin-left: 580px;
+    font-family:'Lucida Grande', Tahoma, Verdana, sans-serif;
+    color: #000;
+}
+
+#password{
+    position: absolute;
+    top: 206px;
+    margin-left: 10px;
+}
+
+#cfpassword{
+    position: absolute;
+    top: 206px;
+    margin-left: 365px;
+}
+
+#aboutme{
+    position: absolute;
+    top: 275px;
+    margin-left: 10px;
+}
+
+#aboutme textarea{
+    height: 115px;
+    width: 305px;
+    border-color: lightgrey;
+    border-radius: 4px;
+    padding: 2px;
+    font-size: 15px;
+}
+
+#aboutme textarea:focus{
+    color: #000000;
+    outline: none !important;
+    border:1px solid #93C7F2;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+#sports{
+    position: absolute;
+    top: 275px;
+    margin-left: 333px;
+}
+
+#ck-collection{
+    border:1px solid lightgrey;
+    border-radius: 4px;
+    width: 365px;
+    height: 118px;
+    position: relative;
+}
+
+.ck-button label{ 
+    display: inline-block; 
+    border: solid 1px lightgrey; 
+    background-color: white;
+    font-size: 14px;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+
+.ck-button input{
+  display:none;
+}
+
+
+input:checked + label{
+  background-color: #97D38D;
+}
+
+.ck-button:hover {
+    color: #000000;
+    outline: none !important;
+    border:1px solid #97D38D;
+    border-radius: 4px;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+.ck-button:nth-child(1){
+    position: absolute;
+    margin-left: 6px;
+    margin-top: 5px;
+}
+
+.ck-button:nth-child(2){
+    position: absolute;
+    margin-left: 88px;
+    margin-top: 5px;
+}
+
+.ck-button:nth-child(3){
+    position: absolute;
+    margin-left: 188px;
+    margin-top: 5px;
+}
+
+.ck-button:nth-child(4){
+    position: absolute;
+    margin-left: 272px;
+    margin-top: 5px;
+}
+
+.ck-button:nth-child(5){
+    position: absolute;
+    margin-left: 6px;
+    margin-top: 42px;
+}
+
+.ck-button:nth-child(6){
+    position: absolute;
+    margin-left: 121px;
+    margin-top: 42px;
+}
+
+.ck-button:nth-child(7){
+    position: absolute;
+    margin-left: 230px;
+    margin-top: 42px;
+}
+
+.ck-button:nth-child(8){
+    position: absolute;
+    margin-left: 6px;
+    margin-top: 80px;
+}
+
+.ck-button:nth-child(9){
+    position: absolute;
+    margin-left: 82px;
+    margin-top: 80px;
+}
+
+.ck-button:nth-child(10){
+    position: absolute;
+    margin-left: 177px;
+    margin-top: 80px;
+}
+
+.ck-button:nth-child(11){
+    position: absolute;
+    margin-left: 262px;
+    margin-top: 80px;
+}
+
+#input_submit{
+    position: absolute;
+    background-color: #74AD1B;
+    color: white;
+    width: 100px;
+    top: 435px;
+    left: 10px;
+}
+
+#input_submit:hover{
+    background-color: #22B90A;
+}
+
+input:invalid {
+    color: #000000;
+    background-color: #FFD9D9;
+    border: 2px solid red;
+}
+
+input:valid {
+
+    background-color: rgba(34,185,10, 0.5);
+
+}
+
+textarea
+{
+    resize: none;
+}
+
+#error_mes{
+    position: absolute;
+    display: none;
+    top: 400px;
+    left: 40px;
+    background-color: rgba(255,217,217,0.5);
+}
+
+

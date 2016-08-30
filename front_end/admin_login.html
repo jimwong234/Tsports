@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/admin_login.css">
+	<!-- Google Rokkitt Font-->
+	<link href="https://fonts.googleapis.com/css?family=Rokkitt" rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/scripts/admin_login.js" defer></script>
+</head>
+<body>
+	<header id="header"> 
+          <div id="SiteLogo">
+          <a href="./index.html"> <img src="./assets/images/TSportsLogo_red.svg" alt="TSportsLogo" /> </a>
+          </div>
+ 
+          <nav id="Site_Nav">  
+              <div id="Main_Nav">
+                 <ul>
+                     <li> <a href="./index.html"> Home </a>  </li>
+                 </ul>
+              </div>
+
+              <div id="Home_Buttons">
+                  <ul>
+                  	  <li id="Admin_Button"><a href="./admin_login.html">Admin</a></li>
+                      <li id="Register_Button"> <a href="./index.html"> Register </a> </li>  <!--Change this to the correct link-->
+                      <li id="Login_Button"> <a href="./login.html"> Login </a> </li>  <!--Change this to the correct link-->
+                  </ul>
+              </div>      
+          </nav>
+    </header>
+
+	<main>
+		<section class="login_form">
+			<h1>Admin Portal</h1>
+			<form autocomplete="off" id="AdminLoginForm">
+		            <input type="text" class="input_admin" name="account" placeholder="Account" required />
+		            <!--<span class="form_hint">Enter a valid email</span> -->
+		            <input type="password" pattern=".{6,}" required title="Minimum 6 characters required"class="input_password" name="password" placeholder="Password" required/>
+		            <input type="submit" class="input_submit" value="Login"/>
+		    </form>
+		</section>
+		
+	</main>
+    <div id="error_mes"></div>
+</body>
+</html>
